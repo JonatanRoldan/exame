@@ -23,7 +23,6 @@ function agujeroRandom(holes) {
   if (lastHole === hole) {
     return agujeroRandom(holes);
   }
-  
   lastHole = hole;
   return hole
 }
@@ -33,6 +32,8 @@ function agujeroRandom(holes) {
 function saltar() {
   const time = tiempoRandom(500, 3000);
   const hole = agujeroRandom(holes);
+  let aux = document.getElementsByClassName(hole);
+  aux.classList.add(up);
 
   // 2. Agregar la clase 'up' al elemento 'hole' para que el bug aparezca
   setTimeout(() => {
