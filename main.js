@@ -65,7 +65,7 @@ function iniciarJuego() {
 
 
 // 4. Agregar el evento 'click' al todos los elementos 'bug'
-document.getElementsByClassName(bugs).addEventListener('click'); 
+bugs.forEach(x=> x.addEventListener('click',golpear));
 
 // 5. Hacer un bind del evento click del boton iniciar juego
 document.getElementById('start');
