@@ -48,7 +48,7 @@ function saltar() {
 function golpear(event) {
   console.log('boing!!')
   if (!event.isTrusted) return; // Alguien intentó hacer trampa
-  document.getElementsByClassName(bug).addEventListener('click');  
+  //document.getElementsByClassName(bug).addEventListener('click');  
   
   score++;
   scoreBoard.textContent = score;
@@ -65,5 +65,7 @@ function iniciarJuego() {
 
 
 // 4. Agregar el evento 'click' al todos los elementos 'bug'
+document.getElementsByClassName(bug).addEventListener('click'); 
 
 // 5. Hacer un bind del evento click del boton iniciar juego
+document.getElementById('start').addEventListener('click',iniciarJuego);
