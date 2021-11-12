@@ -48,7 +48,8 @@ function saltar() {
 function golpear(event) {
   console.log('boing!!')
   if (!event.isTrusted) return; // Alguien intentó hacer trampa
-
+  document.getElementsByClassName(bug).addEventListener('click');  
+  
   score++;
   scoreBoard.textContent = score;
 }
